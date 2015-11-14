@@ -2,7 +2,7 @@
 FROM mono
 MAINTAINER Arialdo Martini "arialdomartini@gmail.com"
 
-COPY content/ /var/buildmachine/
+COPY buildmachine/ /var/buildmachine/
 WORKDIR /var/buildmachine/
 RUN mono tools/NuGet.exe Install FAKE -ExcludeVersion -OutputDirectory tools
 RUN mono tools/NuGet.exe Install NUnit.Runners -ExcludeVersion -OutputDirectory tools
